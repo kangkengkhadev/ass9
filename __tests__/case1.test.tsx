@@ -3,26 +3,6 @@ import getHospitals from '@/libs/getHospitals'
 import HospitalCatalog from '@/components/HospitalCatalog'
 import { screen, render, waitFor } from '@testing-library/react'
 
-interface HospitalItem {
-  _id: string,
-  name: string,
-  address: string,
-  district: string,
-  province: string,
-  postalcode: string,
-  tel: string,
-  picture: string,
-  __v: number,
-  id: string
-}
-
-interface HospitalJson {
-  success: boolean,
-  count: number,
-  pagination: Object,
-  data: HospitalItem[]
-}
-
 describe('Get Hospitals', () => {
   var hospitalPromise:Promise<Object>
   var hospitalsJsonResult:Object
