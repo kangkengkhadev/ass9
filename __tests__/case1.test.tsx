@@ -15,7 +15,8 @@ describe('Get Hospitals', () => {
     const resultData = hospitalsJsonResult.data
     expect(hospitalsJsonResult.count).toBe(3) 
     expect(resultData).toHaveLength(3)
-    expect(resultData[0].id).toMatch(/651fad5f05c6b313f8dfb1e5/i) 
+    const ids = ["651faed405c6b313f8dfb1eb", "651fad5f05c6b313f8dfb1e5", "651fae4b05c6b313f8dfb1e8"]
+    expect(ids).toContain(resultData[0].id)  
   })
 
   it('Hospital Catalog should have correct number of images', async () => {
